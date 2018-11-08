@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "declaration": true,
     "stripInternal": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strictNullChecks": false,
     "noImplicitAny": false,

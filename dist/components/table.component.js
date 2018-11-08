@@ -4,7 +4,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Component, Input, Output, EventEmitter, ContentChildren, ContentChild, ViewChildren } from '@angular/core';
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+import { Component, Input, Output, EventEmitter, ContentChildren, QueryList, TemplateRef, ContentChild, ViewChildren } from '@angular/core';
 import { DataTableColumn } from './column.component';
 import { DataTableRow } from './row.component';
 import { defaultTranslations } from './types';
@@ -314,94 +317,130 @@ var DataTable = /** @class */ (function () {
         return true;
     };
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Array),
+        __metadata("design:paramtypes", [Array])
     ], DataTable.prototype, "items", null);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Number)
     ], DataTable.prototype, "itemCount", void 0);
     __decorate([
-        ContentChildren(DataTableColumn)
+        ContentChildren(DataTableColumn),
+        __metadata("design:type", QueryList)
     ], DataTable.prototype, "columns", void 0);
     __decorate([
-        ViewChildren(DataTableRow)
+        ViewChildren(DataTableRow),
+        __metadata("design:type", QueryList)
     ], DataTable.prototype, "rows", void 0);
     __decorate([
-        ContentChild('dataTableExpand')
+        ContentChild('dataTableExpand'),
+        __metadata("design:type", TemplateRef)
     ], DataTable.prototype, "expandTemplate", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", String)
     ], DataTable.prototype, "headerTitle", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "header", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "pagination", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "indexColumn", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "indexColumnHeader", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Function)
     ], DataTable.prototype, "rowColors", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Function)
     ], DataTable.prototype, "rowTooltip", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "selectColumn", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "multiSelect", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "substituteRows", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "expandableRows", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "translations", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "selectOnRowClick", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "autoReload", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "showReloading", void 0);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "sortBy", null);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "sortAsc", null);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "offset", null);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "limit", null);
     __decorate([
-        Input()
+        Input(),
+        __metadata("design:type", Object),
+        __metadata("design:paramtypes", [Object])
     ], DataTable.prototype, "page", null);
     __decorate([
-        Output()
+        Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "reload", void 0);
     __decorate([
-        Output()
+        Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "rowClick", void 0);
     __decorate([
-        Output()
+        Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "rowDoubleClick", void 0);
     __decorate([
-        Output()
+        Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "headerClick", void 0);
     __decorate([
-        Output()
+        Output(),
+        __metadata("design:type", Object)
     ], DataTable.prototype, "cellClick", void 0);
     DataTable = __decorate([
         Component({
